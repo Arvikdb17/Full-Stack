@@ -13,7 +13,7 @@ A dynamic web application that allows admins to add movies, and users to browse 
 ## Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript
-- **Backend:** JSP, Servlets
+- **Backend:** JSP, Servlets, JDBC
 - **Database:** MySQL
 - **Server:** Apache Tomcat
 
