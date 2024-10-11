@@ -28,4 +28,5 @@ A dynamic web application that allows admins to add movies, and users to browse 
 ### User Panel:
 ![Screenshot 2024-10-11 130401](https://github.com/user-attachments/assets/8744be5d-01b3-4d3a-8dbb-33fd35a3a8e9)
 
+![Screenshot 2024-10-11 130412](https://github.com/user-attachments/assets/fda3b77a-5fa1-4979-98c8-7141c2615b21)
 
