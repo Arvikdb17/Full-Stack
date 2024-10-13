@@ -67,8 +67,8 @@ public class AddMovie extends HttpServlet {
             HttpSession session = request.getSession();
 
             if (f) {
-               
-                String tempDirectory = getServletContext().getRealPath("") + File.separator + "temp";
+                //Old Code for image uploading
+                /*String tempDirectory = getServletContext().getRealPath("") + File.separator + "temp";
                 File tempFile = new File(tempDirectory, fileName);
                 part.write(tempFile.getAbsolutePath());
 
@@ -76,8 +76,22 @@ public class AddMovie extends HttpServlet {
                // String destinationDirectory = "C:\\Users\\mraur\\intellij_project\\demo\\src\\main\\webapp\\assets\\images";
                 String destinationDirectory = "C:\\Users\\tamilmani\\Desktop\\MovieX\\MovieX\\src\\main\\webapp\\assets\\images";
                 File destinationFile = new File(destinationDirectory, fileName);
-                Files.move(tempFile.toPath(), destinationFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                Files.move(tempFile.toPath(), destinationFile.toPath(), StandardCopyOption.REPLACE_EXISTING); */
+               
+            	 String uploadPath = getServletContext().getRealPath("") + File.separator + "assets" + File.separator + "images";
+            	 
+            	 // Ensure the directory exists
+                 File uploadDir = new File(uploadPath);
+                 if (!uploadDir.exists()) {
+                     uploadDir.mkdirs();
+                 }
 
+                 // Write the file to the target location
+                 String filePath = uploadPath + File.separator + fileName;
+                 try (InputStream input = part.getInputStream()) {
+                     Files.copy(input, new File(filePath).toPath(), StandardCopyOption.REPLACE_EXISTING);
+                 }
+                 
                 response.sendRedirect("admin.jsp");
             } else {
                 session.setAttribute("failedMsg", "Something went wrong on the server");
