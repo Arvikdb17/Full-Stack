@@ -30,3 +30,6 @@ A dynamic web application that allows admins to add movies, and users to browse 
 
 ![Screenshot 2024-10-11 130412](https://github.com/user-attachments/assets/fda3b77a-5fa1-4979-98c8-7141c2615b21)
 
+![Screenshot 2024-11-06 195546](https://github.com/user-attachments/assets/499960b7-fb18-4225-82fe-c802249abcb1)
+
+
